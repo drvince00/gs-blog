@@ -35,7 +35,9 @@ async function uploadImageToGitHub(imageBuffer, fileName) {
 
     return `https://raw.githubusercontent.com/drvince00/gs-blog/main/public/${fileName}`;
   } catch (error) {
-    console.error("GitHub에 이미지 업로드 중 오류 발생:", error);
+    // console.error("GitHub에 이미지 업로드 중 오류 발생:", error);
+    // throw error;
+    console.error('Detailed GitHub API error:', JSON.stringify(error, null, 2));
     throw error;
   }
 }
