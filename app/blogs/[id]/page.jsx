@@ -14,13 +14,17 @@ const Page = ({ params }) => {
   // console.log('params.id:', Number(params.id));
 
   const fetchBlogData = async () => {
-    const res = await axios.get('/api/blog', {
-      params: {
-        id: params.id,
-      },
-    });
-
-    setData(res.data);
+    try {
+      const res = await axios.get('/api/blog', {
+        params: {
+          id: params.id,
+        },
+      });
+      setData(res.data);
+    } catch (err) {
+      console.error('Error fetching blog data:', err);
+      setError('Failed to load blog data. Please try again later.');
+    }
   };
 
   useEffect(() => {
