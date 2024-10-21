@@ -4,7 +4,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
+<<<<<<< HEAD
 const Page = () => {
+=======
+const page = () => {
+>>>>>>> 2530ef5 (Initial commit)
   const [emails, setEmails] = useState([]);
 
   const fetchEmails = async () => {
@@ -74,4 +78,8 @@ const Page = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page;
+=======
+export default page;
+>>>>>>> 2530ef5 (Initial commit)
